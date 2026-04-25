@@ -673,7 +673,7 @@
         })
       })
 
-      const tempoPitch = 3
+      const tempoPitch = 4633
       const minutos = Math.floor(tempoPitch / 100)
       const segundos = tempoPitch % 100
       const tempoPitchSegundos = minutos * 60 + segundos
@@ -686,87 +686,6 @@
           })
         })
       }
-    </script>
-
-    <script>
-      function getParameterByName(name) {
-        const url = window.location.href
-        const nameRegex = name.replace(/[\[\]]/g, "\\$&")
-        const regex = new RegExp("[?&]" + nameRegex + "(=([^&#]*)|&|#|$)")
-        const results = regex.exec(url)
-        return results
-          ? decodeURIComponent(results[2].replace(/\+/g, " "))
-          : null
-      }
-
-      function sendPostback(url) {
-        // keepalive ajuda a não cancelar o request ao navegar para outra página
-        fetch(url, {
-          method: "GET",
-          mode: "no-cors",
-          keepalive: true,
-        })
-          .then(() => console.log(`Postback sent: ${url}`))
-          .catch((error) => console.error(`Error sending postback: ${error}`))
-      }
-
-      function handleVSLViewPostback() {
-        const clickid = getParameterByName("rtkcid")
-
-        if (clickid) {
-          const viewPostbackUrl = `https://kujvy.ttrk.io/postback?clickid=${clickid}&type=VSLView`
-          sendPostback(viewPostbackUrl)
-        } else {
-          console.log("Parâmetro rtkcid não encontrado na URL para VSL View")
-        }
-      }
-
-      function handleInitiateCheckoutPostbackUrlPostback() {
-        const clickid = getParameterByName("rtkcid")
-
-        if (clickid) {
-          const InitiateCheckoutPostbackUrl = `https://kujvy.ttrk.io/postback?clickid=${clickid}&type=InitiateCheckout`
-          sendPostback(InitiateCheckoutPostbackUrl)
-        } else {
-          console.log(
-            "Parâmetro rtkcid não encontrado na URL para InitiateCheckout",
-          )
-        }
-      }
-
-      // Função chamada ao clicar na <a>
-      function handleCheckoutLinkClick(event) {
-        event.preventDefault() // impede a navegação automática
-
-        const link = event.currentTarget
-        let href = link.getAttribute("href")
-
-        if (!href) return
-
-        // Usa URL para tratar query string certinho
-        const url = new URL(href, window.location.href)
-        url.searchParams.set("sub16", "L1") // adiciona ou substitui sub16=L1
-
-        // dispara o postback de InitiateCheckout
-        handleInitiateCheckoutPostbackUrlPostback()
-
-        // redireciona (funciona no iPhone/Safari)
-        window.location.href = url.toString()
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        // Chama o postback de view quando abrir a página
-        handleVSLViewPostback()
-
-        // Liga o clique na(s) <a> de checkout
-        const checkoutLinks = document.querySelectorAll(
-          "a.smartplayer-click-event",
-        )
-
-        checkoutLinks.forEach(function (a) {
-          a.addEventListener("click", handleCheckoutLinkClick, false)
-        })
-      })
     </script>
   </body>
 </html>
