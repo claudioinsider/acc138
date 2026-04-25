@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://trk.edbb.lat/pretrack.js?rtkcmpid=69ec12b62c57613a6a22a547"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Real Cucumber Trick</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f0f2f5;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+
+      .pvr-8kz {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        max-width: 750px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* ── Header ── */
+      .lqx-4mf {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px 10px;
+        border-bottom: 1px solid #e4e6eb;
+      }
+
+      .bwn-7ct {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .jhs-2rg {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #ccc;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .jhs-2rg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .yzk-5dp {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mtu-9vl {
+        font-size: 14px;
+        font-weight: 700;
+        color: #050505;
+      }
+
+      .rfq-3ew {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: #65676b;
+      }
+
+      .rfq-3ew .xcd-6nb {
+        font-size: 10px;
+      }
+
+      .gzp-1js {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: #f0a500;
+        padding: 2px 4px;
+        line-height: 1;
+      }
+
+      /* ── Headline ── */
+      .oki-4th {
+        padding: 18px 10px 12px;
+        text-align: center;
+      }
+
+      .nvs-7bm {
+        color: #c0392b;
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 1.3;
+        margin-bottom: 4px;
+      }
+
+      .wej-2qf {
+        color: #1a3a6b;
+        font-size: 1.3rem;
+        font-weight: 800;
+        line-height: 1.35;
+      }
+
+      /* ── Thumbnail ── */
+      .cls-5xd {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: #111;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .hpq-8ry {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+
+      .dkm-3vz,
+      .ufb-6wt {
+        flex: 1;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .dkm-3vz {
+        background-image: url("pep.png");
+      }
+
+      .ufb-6wt {
+        background-image: url("bna2.png");
+        background-position: top center;
+      }
+
+      .ztg-9lc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 108px;
+        height: 72px;
+        pointer-events: none;
+      }
+
+      .ztg-9lc svg {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+      }
+
+      /* ── CTA Button ── */
+      .rnx-4hs {
+        display: flex;
+        justify-content: center;
+        padding: 16px 18px;
+      }
+
+      .ymo-7pk {
+        display: block;
+        background: #1d9bf0;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 3px;
+        padding: 14px 0;
+        width: 100%;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .ymo-7pk:hover {
+        background: #1a8cd8;
+      }
+
+      /* ── Body Text ── */
+      .aqv-2nj {
+        padding: 4px 18px 18px;
+        font-size: 14px;
+        color: #1c1e21;
+        line-height: 1.6;
+      }
+
+      .aqv-2nj p {
+        margin-bottom: 12px;
+      }
+
+      .aqv-2nj p:last-child {
+        margin-bottom: 0;
+      }
+
+      .aqv-2nj .ifc-5ge {
+        font-weight: 700;
+      }
+
+      .swl-1yt {
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: #1c1e21;
+        line-height: 1.5;
+      }
+
+      .epd-8kq {
+        font-size: 16px;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .bzh-3xm {
+        font-size: 14px;
+        font-weight: 700;
+        color: #1c1e21;
+        margin-bottom: 16px;
+      }
+
+      /* ── Footer Disclaimer ── */
+      .vjr-6fw {
+        background: #fff;
+        border-top: 1px solid #e4e6eb;
+        padding: 12px 14px;
+        font-size: 11px;
+        color: #65676b;
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      .vjr-6fw a {
+        color: #1a73e8;
+        text-decoration: underline;
+      }
+
+      @media screen and (min-width: 700px) {
+        .nvs-7bm {
+          font-size: 1.8rem;
+        }
+
+        .wej-2qf {
+          font-size: 1.8rem;
+        }
+
+        .aqv-2nj {
+          font-size: 1.1rem;
+        }
+
+        .swl-1yt {
+          font-size: 0.9rem;
+        }
+        .bzh-3xm {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pvr-8kz">
+      <!-- Header -->
+      <div class="lqx-4mf">
+        <div class="bwn-7ct">
+          <div class="jhs-2rg">
+            <img
+              src="https://i.pravatar.cc/80?img=47"
+              alt="Wellness Research"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="yzk-5dp">
+            <span class="mtu-9vl">Wellness Research</span>
+            <div class="rfq-3ew">
+              <span>📋 7 hours ago</span>
+              <span class="xcd-6nb">·</span>
+              <span>👁 34,782 views</span>
+            </div>
+          </div>
+        </div>
+        <button class="gzp-1js" title="Save" aria-label="Bookmark">🔖</button>
+      </div>
+
+      <!-- Headline -->
+      <div class="oki-4th">
+        <div class="nvs-7bm">The Japanese Cucumber Trick</div>
+        <div class="wej-2qf">
+          That Dropped My Blood Pressure From 160/100 To 120/80 In Just 2 Weeks.
+        </div>
+      </div>
+
+      <!-- Thumbnail / Video -->
+      <a href="next">
+        <div class="cls-5xd" id="thumbnailWrap">
+          <div class="hpq-8ry">
+            <div class="dkm-3vz"></div>
+            <div class="ufb-6wt"></div>
+          </div>
+          <div class="ztg-9lc">
+            <svg viewBox="0 0 108 72" xmlns="http://www.w3.org/2000/svg">
+              <rect rx="14" ry="14" width="108" height="72" fill="#ff0000" />
+              <polygon points="43,20 43,52 74,36" fill="#ffffff" />
+            </svg>
+          </div>
+        </div>
+      </a>
+      <!-- CTA 1 -->
+      <div class="rnx-4hs">
+        <a class="ymo-7pk" href="next">Watch Now</a>
+      </div>
+
+      <!-- Body Copy -->
+      <div class="aqv-2nj">
+        <p>
+          A simple recipe with Japanese cucumber is being silenced for proving
+          that it normalizes blood pressure in less than a month and outperforms
+          any conventional medication by up to 10 times.
+        </p>
+        <p class="ifc-5ge">
+          Discovered by Dr. Hartman after 8 years of research, this formula
+          remained hidden because it directly contradicts the billion-dollar
+          interests of pharmaceutical companies that profit from losartan and
+          other blood pressure medications.
+        </p>
+        <p>
+          Without cutting salt, without restrictive diets, and without spending
+          money on expensive medications for the rest of your life, this natural
+          solution acts directly on the root cause of high blood pressure,
+          restoring what your own body stopped producing over time.
+        </p>
+        <p class="ifc-5ge">
+          Attention: results appear within the first 7 days, and in 30 days,
+          patients report blood pressure numbers they haven't seen in decades.
+        </p>
+
+        <div class="swl-1yt">
+          <span class="epd-8kq">⚠️</span>
+          <span>
+            <strong>WARNING:</strong> This video may be removed at any time.
+            Watch now before it's too late. This window may close without
+            warning.
+          </span>
+        </div>
+
+        <div class="bzh-3xm">
+          Available Spots To Watch The Video:
+          <span id="spotsCount">3</span> Remaining
+        </div>
+
+        <!-- CTA 2 -->
+        <div class="rnx-4hs" style="padding: 0 0 4px">
+          <a class="ymo-7pk" href="next">Watch Now</a>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="vjr-6fw">
+        Representations regarding the efficacy and safety of this product have
+        not been evaluated by the Food and Drug Administration. The FDA only
+        evaluates foods and drugs, not supplements like these products. These
+        products are not intended to diagnose, prevent, treat, or cure any
+        disease.
+        <a>Click here</a>
+        to find evidence of a test, analysis, research, or study describing the
+        benefits, performance or efficacy of this product based on the expertise
+        of relevant professionals.
+      </div>
+    </div>
+
+    <script>
+      let spots = 3
+      const spotsEl = document.getElementById("spotsCount")
+
+      function maybeDecrement() {
+        if (spots > 1) {
+          const delay = Math.floor(Math.random() * 60000) + 30000
+          setTimeout(() => {
+            spots--
+            spotsEl.textContent = spots
+            if (spots > 1) maybeDecrement()
+          }, delay)
+        }
+      }
+      maybeDecrement()
+    </script>
+    <script>
+      function getParameterByName(name) {
+        const url = window.location.href
+        const nameRegex = name.replace(/[\[\]]/g, "\\$&")
+        const regex = new RegExp("[?&]" + nameRegex + "(=([^&#]*)|&|#|$)")
+        const results = regex.exec(url)
+        return results
+          ? decodeURIComponent(results[2].replace(/\+/g, " "))
+          : null
+      }
+
+      function sendPostback(url) {
+        fetch(url)
+          .then(() => console.log(`Postback sent: ${url}`))
+          .catch((error) => console.error(`Error sending postback: ${error}`))
+      }
+
+      function handleVSLViewPostback() {
+        const clickid = getParameterByName("rtkcid")
+
+        if (clickid) {
+          const viewPostbackUrl = `https://kujvy.ttrk.io/postback?clickid=${clickid}&type=Pressel`
+          sendPostback(viewPostbackUrl)
+        } else {
+          console.log("Paramètre rtkcid non trouvé dans l'URL pour VSL View")
+        }
+      }
+
+      handleVSLViewPostback()
+    </script>
+  </body>
+</html>
